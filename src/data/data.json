@@ -1,0 +1,88 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "iPhone 9"
+    },
+    {
+      "id": 2,
+      "title": "iPhone X"
+    },
+    {
+      "id": 3,
+      "title": "Samsung Universe 9"
+    },
+    {
+      "id": 5,
+      "title": "Huawei P30"
+    },
+    {
+      "id": 6,
+      "title": "MacBook Pro"
+    },
+    {
+      "id": 7,
+      "title": "Samsung Galaxy Book"
+    },
+    {
+      "id": 8,
+      "title": "Microsoft Surface Laptop 4"
+    },
+    {
+      "id": 9,
+      "title": "Infinix INBOOK"
+    },
+    {
+      "id": 10,
+      "title": "HP Pavilion 15-DK1056WM"
+    },
+    {
+      "id": 12,
+      "title": "Brown Perfume"
+    },
+    {
+      "id": 13,
+      "title": "Fog Scent Xpressio Perfume"
+    },
+    {
+      "id": 14,
+      "title": "Non-Alcoholic Concentrated Perfume Oil"
+    },
+    {
+      "id": 15,
+      "title": "Eau De Perfume Spray"
+    },
+    {
+      "id": 16,
+      "title": "Hyaluronic Acid Serum"
+    },
+    {
+      "id": 18,
+      "title": "Oil Free Moisturizer"
+    },
+    {
+      "id": 19,
+      "title": "Skin Beauty Serum"
+    },
+    {
+      "id": 20,
+      "title": "Freckle Treatment Cream"
+    },
+    {
+      "id": 22,
+      "title": "Elbow Macaroni"
+    },
+    {
+      "id": 23,
+      "title": "Orange Essence Food Flavou"
+    },
+    {
+      "id": 25,
+      "title": "Gulab Powder"
+    },
+    {
+      "id": 26,
+      "title": "Plant Hanger For Home"
+    }
+  ]
+}

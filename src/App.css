@@ -1,0 +1,75 @@
+.container {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.auto-complete-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  background-color: white;
+  padding: 1rem 4rem;
+}
+
+.auto-complete-container-inner {
+  width: 100%;
+  max-width: 500px;
+}
+
+.title-header {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.auto-complete-input-container {
+  width: 100%;
+  display: flex;
+  z-index: 10;
+}
+
+.auto-complete-input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+
+.auto-complete-result {
+  width: calc(100% -2px);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  border-bottom: 1px solid lightgray;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+  margin-top: -1rem;
+  z-index: 1;
+}
+
+.auto-complete-result-item {
+  font-size: 16px;
+  font-style: italic;
+}
+
+.auto-complete-result-item-highlight {
+  background-color: yellow;
+}
+
+.auto-complete-result-error {
+  background-color: lightpink;
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
