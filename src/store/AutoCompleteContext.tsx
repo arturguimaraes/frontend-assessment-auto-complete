@@ -1,6 +1,6 @@
 import { createContext, useContext, ReactNode } from 'react';
-import { AutoCompleteContextType } from '../../utils/types';
-import useAutoCompleteAPI from '../../hooks/useAutoCompleteAPI';
+import { AutoCompleteContextType } from '../utils/types';
+import useAutoCompleteAPI from '../hooks/useAutoCompleteAPI';
 // import useAutoCompleteMock from '../../hooks/useAutoCompleteMock';
 
 const AutocompleteContext = createContext<AutoCompleteContextType | undefined>(undefined);

@@ -1,4 +1,4 @@
-import { useAutoComplete } from '../store/AutoCompleteContext';
+import { useAutoComplete } from '../../store/AutoCompleteContext';
 import ResultItem from './ResultItem';
 
 const Result: React.FC<{}> = () => {

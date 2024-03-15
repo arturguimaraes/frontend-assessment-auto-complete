@@ -32,11 +32,17 @@ const useAutoCompleteAPI = (): AutoCompleteContextType => {
 
       try {
         const response = await fetch(`${DUMMY_PRODUCTS_API_URL}/search?q=${search}`);
+
         if (!response.ok) {
           throw new Error('Network response was not ok.');
         }
+
         const data = await response.json();
-        setResults(data.products);
+        const products: Product[] = data.products;
+
+        setResults(
+          products.sort((product1, product2) => product1.title.localeCompare(product2.title)),
+        );
       } catch (error) {
         console.error('Failed to fetch products:', error);
         setError(true);

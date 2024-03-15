@@ -20,6 +20,7 @@ This project implements an autocomplete search functionality that allows users t
 - **Error Handling**: Gracefully handles errors, providing user feedback on failed searches.
 - **Efficient Fetching**: Implements debounce to reduce the number of API calls, enhancing performance (only triggers API call after a brief moment the user has stopped typing).
 - **Context API**: Leverages React's Context API to manage and share state across components, making the application scalable and maintainable.
+- **React Memo**: Uses React Memo to avoid unnecessary re-renders in the ResultItem component, which is repeatedly called.
 
 ## Getting Started
 

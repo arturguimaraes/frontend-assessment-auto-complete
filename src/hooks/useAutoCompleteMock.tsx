@@ -35,7 +35,7 @@ const useAutoCompleteMock = (): AutoCompleteContextType => {
             const products = mockData.products;
             const filtered = products
               .filter((product) => product.title.toLowerCase().includes(search.toLowerCase()))
-              .sort((p1, p2) => p1.title.localeCompare(p2.title));
+              .sort((product1, product2) => product1.title.localeCompare(product2.title));
             resolve(filtered);
           }, MOCK_API_DELAY); // Simulate delay
         });

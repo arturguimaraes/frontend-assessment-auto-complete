@@ -6,7 +6,8 @@ interface Props {
   search: string;
 }
 
-const ResultItem: React.FC<Props> = ({ item, search }) => {
+// React.memo to avoid unecessary renderings in this repeated component
+const ResultItem: React.FC<Props> = React.memo(({ item, search }) => {
   const highlightSearchTerm = (name: string, searchTerm: string) => {
     // Return early if the search term is empty or whitespace
     if (searchTerm.trim() === '') return name;
@@ -34,6 +35,6 @@ const ResultItem: React.FC<Props> = ({ item, search }) => {
   };
 
   return <div className='auto-complete-result-item'>{highlightSearchTerm(item.title, search)}</div>;
-};
+});
 
 export default ResultItem;

@@ -1,5 +1,5 @@
 import AutoComplete from './components/autoComplete/AutoComplete';
-import { AutocompleteProvider } from './components/store/AutoCompleteContext';
+import { AutocompleteProvider } from './store/AutoCompleteContext';
 import './App.css';
 
 function App() {
