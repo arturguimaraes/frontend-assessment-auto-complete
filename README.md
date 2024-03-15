@@ -1,5 +1,17 @@
 # AutoComplete Product Search
 
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Author](#author)
+
+## Introduction
+
 This project implements an autocomplete search functionality that allows users to search for products by their names. Utilizing the power of React's Context API and custom hooks, it provides a seamless and efficient way to filter through products as the user types, displaying matching products' titles.
 
 ## Features
@@ -44,3 +56,10 @@ The application will be running at http://localhost:3000.
 ### Usage
 
 Simply start typing the name of the product you're looking for in the search bar. As you type, a list of matching products (by title) will be displayed below. The search is optimized to trigger after you've stopped typing for a brief moment, reducing unnecessary API calls.
+
+### Author
+
+Name: Artur Guimarães
+Email: arturguimaraes92@hotmail.com
+LinkedIn: https://www.linkedin.com/in/arturguimaraes-frontend/
+Project Link: https://github.com/arturguimaraes/frontend-assessment-auto-complete
