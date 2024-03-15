@@ -6,7 +6,7 @@ This project implements an autocomplete search functionality that allows users t
 
 - **Instant Search**: Dynamically search through product names as you type.
 - **Error Handling**: Gracefully handles errors, providing user feedback on failed searches.
-- **Efficient Fetching**: Implements debounce to reduce the number of API calls, enhancing performance.
+- **Efficient Fetching**: Implements debounce to reduce the number of API calls, enhancing performance (only triggers API call after a brief moment the user has stopped typing).
 - **Context API**: Leverages React's Context API to manage and share state across components, making the application scalable and maintainable.
 
 ## Getting Started
