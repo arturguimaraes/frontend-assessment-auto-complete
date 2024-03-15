@@ -35,17 +35,48 @@ Since every component needs to return a single JSX Element, React created the Re
 
 Works:
 ```html
-<div class="parent">
-  <div class="child">Child 1</div>
-  <div class="child">Child 2</div>
+<div className="parent">
+  <div className="child">Child 1</div>
+  <div className="child">Child 2</div>
 </div>
 ```
 
 Does not work
 ```html
 <>
-  <div class="child">Child 1</div>
-  <div class="child">Child 2</div>
+  <div className="child">Child 1</div>
+  <div className="child">Child 2</div>
 </>
 ```
 
+6. **Give 3 examples of the HOC pattern.**
+
+- For applying layouts in a component
+```jsx
+const withLayout = (WrappedComponent) => (props) => {
+  return (
+    <Layout>
+        <WrappedComponent data={data} {...props} />
+    </Layout>
+  );
+};
+```
+
+- For authentication
+```jsx
+const withUserAuthentication = (WrappedComponent) => (props) => {
+  const isAuthenticated = checkIsAuthenticated();
+  return isAuthenticated ? <WrappedComponent {...props} /> : <LoginComponent />;
+};
+```
+
+- For fetching data
+```jsx
+const withDataFetching = (WrappedComponent) => (props) => {
+  const [data, setData] = useState(null);
+  useEffect(() => {
+    fetchData().then(setData);
+  }, []);
+  return <WrappedComponent data={data} {...props} />;
+};
+```
