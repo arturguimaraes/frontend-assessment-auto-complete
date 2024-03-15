@@ -4,13 +4,13 @@
 
 1. **What is the difference between Component and PureComponent? Give an example where it might break my app.**
 
-The Component does not implement the shouldComponentUpdate() method, and the PureComponent does. Because of this, Component calls the render() method behind the scenes every time states or props are updated. With that being said, PureComponent is more efficient because it compares the old state with the new one, and prevents unnecessary re-renders.
+The Component does not implement the `shouldComponentUpdate()` method, and the PureComponent does. Because of this, Component calls the `render()` method behind the scenes every time states or props are updated. With that being said, PureComponent is more efficient because it compares the old state with the new one, and prevents unnecessary re-renders.
 
 But this comparison is very basic, so if we have more complex states, nested properties, etc., it might break the app.
 
 2. **Context + ShouldComponentUpdate might be dangerous. Why is that?**
 
-This combination is dangerous because the context bypasses the shouldComponentUpdate() method. So sometimes the component might miss a state update. To resolve this, use React.memo.
+This combination is dangerous because the context bypasses the `shouldComponentUpdate()` method. So sometimes the component might miss a state update. To resolve this, use `React.memo`.
 
 3. **Describe 3 ways to pass information from a component to its PARENT.**
 
@@ -25,7 +25,7 @@ This combination is dangerous because the context bypasses the shouldComponentUp
 
 5. **What is a fragment and why do we need it? Give an example where it might break my app.**
 
-Since every component needs to return a single JSX Element, React created the React.Fragment element to help us group elements in sequence and in the same level, to avoid unecessary creation of extra divs in the DOM. It might break the app for example, if in CSS we have access through parents:
+Since every component needs to return a single JSX Element, React created the `React.Fragment` element to help us group elements in sequence and in the same level, to avoid unecessary creation of extra divs in the DOM. It might break the app for example, if in CSS we have access through parents:
 
 ```css
 .parent > .child {
@@ -42,7 +42,7 @@ Works:
 </div>
 ```
 
-Does not work
+Does not work:
 
 ```html
 <>
@@ -59,7 +59,7 @@ Does not work
 const withLayout = (WrappedComponent) => (props) => {
   return (
     <Layout>
-      <WrappedComponent data={data} {...props} />
+      <WrappedComponent {...props} />
     </Layout>
   );
 };
@@ -85,3 +85,57 @@ const withDataFetching = (WrappedComponent) => (props) => {
   return <WrappedComponent data={data} {...props} />;
 };
 ```
+
+7. **What's the difference in handling exceptions in promises, callbacks and async...await?**
+
+In promises, we would use the `catch()` method, that enters in case any failures happen.
+
+```javascript
+fetchData()
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+```
+
+In async functions and callbacks we would use the `try` and `catch` blocks.
+
+```javascript
+async function fetchDataAsync() {
+  try {
+    const data = await fetchData();
+    console.log(data);
+  } catch (error) {
+    console.error(error);
+  }
+}
+```
+
+8. **How many arguments does setState take and why is it async.**
+
+- Update: `(state, props) => stateChange`.
+- Callback: Function that runs after `setState` is done.
+
+It is async to increase performance.
+
+9. **List the steps needed to migrate a Class to Function Component.**
+
+- Use `useState` hook.
+- Change `componentDidMount`, `componentDidUpdate` and `componentWillUnmount` to the `useEffect` hook.
+- Refs with `useRef` instead of `this.refs`.
+- Props accessed directly through function parameters.
+- Convert methods into functions within the functional component.
+
+10. **List a few ways styles can be used with components.**
+
+- CSS Modules
+- Inline styling
+- CSS Stylesheets
+- Styled Components
+
+11. **How to render an HTML string coming from the server.**
+
+Even though it's not recommended, because of attacks in the HTML, you can use the `dangerouslySetInnerHTML` attribute.
+```jsx
+<div dangerouslySetInnerHTML={{ __html: theStringReceivedFromServer }} />
+```
+
+
