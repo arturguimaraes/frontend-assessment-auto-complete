@@ -59,7 +59,7 @@ Simply start typing the name of the product you're looking for in the search bar
 
 ### Author
 
-Name: Artur Guimarães
-Email: arturguimaraes92@hotmail.com
-LinkedIn: https://www.linkedin.com/in/arturguimaraes-frontend/
-Project Link: https://github.com/arturguimaraes/frontend-assessment-auto-complete
+- **Name**: Artur Guimarães
+- **Email**: arturguimaraes92@hotmail.com
+- **LinkedIn**: https://www.linkedin.com/in/arturguimaraes-frontend/
+- **Project Link**: https://github.com/arturguimaraes/frontend-assessment-auto-complete
