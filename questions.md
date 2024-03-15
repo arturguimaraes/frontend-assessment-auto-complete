@@ -29,11 +29,12 @@ Since every component needs to return a single JSX Element, React created the Re
 
 ```css
 .parent > .child {
-    /* some property */
+  /* some property */
 }
 ```
 
 Works:
+
 ```html
 <div className="parent">
   <div className="child">Child 1</div>
@@ -42,6 +43,7 @@ Works:
 ```
 
 Does not work
+
 ```html
 <>
   <div className="child">Child 1</div>
@@ -52,17 +54,19 @@ Does not work
 6. **Give 3 examples of the HOC pattern.**
 
 - For applying layouts in a component
+
 ```jsx
 const withLayout = (WrappedComponent) => (props) => {
   return (
     <Layout>
-        <WrappedComponent data={data} {...props} />
+      <WrappedComponent data={data} {...props} />
     </Layout>
   );
 };
 ```
 
 - For authentication
+
 ```jsx
 const withUserAuthentication = (WrappedComponent) => (props) => {
   const isAuthenticated = checkIsAuthenticated();
@@ -71,6 +75,7 @@ const withUserAuthentication = (WrappedComponent) => (props) => {
 ```
 
 - For fetching data
+
 ```jsx
 const withDataFetching = (WrappedComponent) => (props) => {
   const [data, setData] = useState(null);
